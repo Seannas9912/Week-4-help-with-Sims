@@ -64,6 +64,28 @@
             }
         </script>
     </div>
+
+    <!-- LESSON 4 -->
+    
+    <div class="lesson">
+        <h3>Lesson 4: Conditions(If/else)</h3>
+
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="lesson4()">Check Password</button>
+        <div class="result" id="result4">Enter password and click</div>
         
+        <script>
+            function lesson4() {
+                var userPassword = document.getElementById("password").value;
+                
+                if (userPassword == "007") {
+                    document.getElementById("result4").innerHTML = "Access granted!";
+                } else {
+                    document.getElementById("result4").innerHTML = "Access denied!";
+                }
+            }
+        </script>
+    </div>
+
 </body>
 </html>
