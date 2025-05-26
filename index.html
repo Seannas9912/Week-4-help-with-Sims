@@ -95,8 +95,24 @@
         <h2 onclick="this.innerHTML='is awesome!'">JavaScript</h2>
         <p>Click on the word "JavaScript" above.</p>
 
+    </div>
+
+    <!-- LESSON 6 -->
+
+    <div class="lesson">
+        <h3>Lesson 6: Functions (Script Version)</h3>
+
+        <h2 id="toggle" onclick="toggleText()">Click me!</h2>
+
         <script>
-            
+            function toggleText() {
+                var toggle = document.getElementById("toggle");
+                if (toggle.innerHTML == "Click me!") {
+                    toggle.innerHTML = "You clicked me!";
+                } else {
+                    toggle.innerHTML = "Move on Now!";
+                }
+            }
         </script>
     </div>
 
