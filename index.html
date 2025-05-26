@@ -152,5 +152,30 @@
         </script>
     </div>
 
+    <!-- LESSON 9 -->
+
+    <div class="lesson">
+        <h3>Lesson 9: Variable scopes</h3>
+        <p><strong>Concept</strong>: Understanding variable scopes</p>
+
+        <button onclick="lesson9()">Show Variable</button>
+        <button onclick="lesson9Local()">Show Local Variable</button>
+        <div class="output" id="output9">Variable will show here.</div>
+        <script>
+            var globalVar = "I am a global variable!";
+
+            function lesson9() {
+                var localVar = "I am a local variable!";
+                document.getElementById("output9").innerHTML = globalVar + " " + localVar;
+            }
+
+            function lesson9Local() {
+                var localVar = "I am a local variable!";
+                document.getElementById("output9").innerHTML = localVar;
+            }
+
+        </script>
+    </div>
+
 </body>
 </html>
