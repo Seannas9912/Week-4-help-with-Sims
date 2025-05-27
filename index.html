@@ -282,15 +282,30 @@
      <!-- LESSON 13 -->
 
     <div class="lesson">
-        <h3>Lesson 13: </h3>
+        <h3>Lesson 13: Numbers and Strings Part 1 </h3>
+        <p><strong>Concept:</strong> Understanding how JaveScript handles text vs nmubers</p>
 
-        <script></script>
+        <button onclick="stringNumber()">Show Strings vs Numbers</button>
+        <div class="output" id="lesson13">Click to see strings vs Numbers</div>
+
+        <script>
+            function stringNumber(){
+                var numA = 5;
+                var numB = 3;
+                var textA = "5";
+                var textB = "3";
+                
+                document.getElementById("lesson13").innerHTML = 
+                "Number addition: " + (numA + numB) + "<br/>" +
+                "Text writing: " + (textA + textB);
+            }
+        </script>
     </div>
 
      <!-- LESSON 14 -->
 
     <div class="lesson">
-        <h3>Lesson 14: </h3>
+        <h3>Lesson 14: Numbers and Strings Part 2 </h3>
 
         <script></script>
     </div>
