@@ -208,9 +208,41 @@
      <!-- LESSON 11 -->
 
     <div class="lesson">
-        <h3>Lesson 11: </h3>
+        <h3>Lesson 11: Login Form Part 2</h3>
+        <p><strong>Concept:</strong> Complete Login verification with Functions and conditions</p>
+        <p><em>Try username: App, password: 145</em></p>
 
-        <script></script>
+         <form>
+            <label for="usernameInput11">Username:</label>
+            <input type="text" id="usernameInput11" /><br/><br/>
+
+            <label for="passwordInput11">Password:</label>
+            <input type="password" id="passwordInput11"/><br/><br/>
+            <button type="button" onclick="verifyUser11()">Get Input Values</button>
+        </form>
+
+        <div class="output" id="message11">Enter username and password to Login</div>
+
+        <script>
+            function verifyUser11(){
+                var username = document.getElementById("usernameInput11").value;
+                var password = document.getElementById("passwordInput11").value;
+
+                checkUserCreds(username, password)
+            }
+
+            function checkUserCreds(username, password){
+                var adminUsername = "App";
+                var adminPassword = "145";
+
+                if(username == adminUsername && password == adminPassword){
+                    document.getElementById("message11").innerHTML = "Loggin you in..."
+                } else{
+                    document.getElementById("message11").innerHTML = "Incorrect Username or Password"
+                }
+            }
+
+        </script>
     </div>
 
      <!-- LESSON 12 -->
