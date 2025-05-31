@@ -129,7 +129,7 @@
 
         <script>
             function addNumbers(num1, num2) {
-                document.getElementById("output7").innerHTML = "The sum is: " + (num1 + num2);
+                document.getElementById("output7").innerHTML = (num1 + num2);
             }
         </script>
     </div>
@@ -285,7 +285,7 @@
         <h3>Lesson 13: Numbers and Strings Part 1 </h3>
         <p><strong>Concept:</strong> Understanding how JaveScript handles text vs nmubers</p>
 
-        <button onclick="stringNumber()">Show Strings vs Numbers</button>
+        <button onclick="stringNumber()">Show Strings vs Numbers (5 + 3)</button>
         <div class="output" id="lesson13">Click to see strings vs Numbers</div>
 
         <script>
@@ -297,7 +297,8 @@
                 
                 document.getElementById("lesson13").innerHTML = 
                 "Number addition: " + (numA + numB) + "<br/>" +
-                "Text writing: " + (textA + textB);
+                "Text writing: " + (textA + textB) + "<br/>" +
+                "Mixed: " + (numA + textA);
             }
         </script>
     </div>
@@ -306,8 +307,30 @@
 
     <div class="lesson">
         <h3>Lesson 14: Numbers and Strings Part 2 </h3>
+        <p><strong>Concept: </strong>Coverting string input to numbers for calculations</p>
 
-        <script></script>
+        <input type="text" id="textNumber1" placeholder="Enter first number" value="10" >
+        <input type="text" id="textNumber2" placeholder="Enter second number" value="5" >
+        <button onclick="convertAndAdd()">Convert And Add</button>
+        <div class="output" id="conversionOutput">Enter number and click to see conversion in action</div>
+
+        <script>
+            function convertAndAdd(){
+                var input1 = document.getElementById("textNumber1").value;
+                var input2 = document.getElementById("textNumber2").value;
+
+                // String concatenation
+                var stringResults = input1 + input2;
+
+                // Number addition
+                var numberResults = parseInt(input1) + parseInt(input2);
+
+                document.getElementById("conversionOutput").innerHTML = 
+                "String concatenation: " + stringResults + "<br/>" +
+                "Number Addition: " + numberResults; 
+            }
+
+        </script>
     </div>
 
      <!-- LESSON 15 -->
