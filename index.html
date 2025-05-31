@@ -110,7 +110,7 @@
                 if (toggle.innerHTML == "Click me!") {
                     toggle.innerHTML = "You clicked me!";
                 } else {
-                    toggle.innerHTML = "Move on Now!";
+                    toggle.innerHTML = "Click me!";
                 }
             }
         </script>
@@ -122,15 +122,17 @@
         <h3>Lesson 7: Function Parameters</h3>
         <p><strong>Concept</strong>: Passing data into function</p>
 
-        <button onclick="addNumbers(10, 7)">Add 10 + 7</button>
-        <button onclick="addNumbers(25, 18)">Add 25 + 18</button>
-        <button onclick="addNumbers(1245, 562)">Add 1245 + 562</button>
-        <div class="output" id="output7">Result will show here.</div>
+            <button onclick="addNumbers(10, 7)">Add 10 + 7</button>
+            <button onclick="addNumbers(25, 18)">Add 25 + 18</button>
+            <button onclick="addNumbers(1245, 562)">Add 1245 + 562</button>
+            <div class="output" id="addition7">Result will show here</div>
 
         <script>
-            function addNumbers(num1, num2) {
-                document.getElementById("output7").innerHTML = (num1 + num2);
-            }
+
+                function addNumbers(n1, n2) {
+                    document.getElementById("addition7").innerHTML = n1 + " + " + n2 + " = " + (n1 + n2);
+                }
+            
         </script>
     </div>
 
@@ -336,9 +338,34 @@
      <!-- LESSON 15 -->
 
     <div class="lesson">
-        <h3>Lesson 15: </h3>
+        <h3>Lesson 15: Numbers and Strings Part 3 </h3>
+        <p><strong>Concept: </strong>Handling conversion errors and invalid input</p>
 
-        <script></script>
+        <input type="text" id="safeInput1" placeholder="Enter first number">
+        <input type="text" id="safeInput2" placeholder="Enter Second number">
+        <button onclick="safeConvertAndAdd()">Safe Convert and Add</button>
+        <div class="output" id="safeOutput">Try entering both number and non-number for error handing</div>
+
+        <script>
+
+            function safeConvertAndAdd(){
+                var input1 = document.getElementById("safeInput1").value;
+                var input2 = document.getElementById("safeInput2").value;
+
+                var num1A = parseInt(input1);
+                var num2B = parseInt(input2);
+
+                if(isNaN(num1A) || isNaN(num2B)){
+                    document.getElementById("safeOutput").innerHTML = 
+                    "Error: Please enter valid number only!<br>" +
+                    "Input 1: " + input1 + " = " (isNaN(num1A) ? "Invlid" : "Valid") + "<br/>" +
+                    "Input 2: " + input2 + " = " (isNaN(num2B) ? "Invlid" : "Valid");
+                } else{
+                    document.getElementById("safeOutput").innerHTML = "Successful!" + num1A + " + " + num2B + " = " + (num1A + num2B);
+                }
+            }
+
+        </script>
     </div>
 
 </body>
